@@ -1,2 +1,3 @@
-# devops-ci-simple
-CI/CD simple pipeline fro java project with Maven
+# DevOps CI/CD simple Pipeline
+
+CI/CD simple pipeline for java application with Maven
