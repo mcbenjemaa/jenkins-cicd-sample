@@ -24,7 +24,7 @@ public class SimpleAppApplicationTests {
 	
 	@Test
 	public void testController() {
-		LOGGER.info(" >>> unit-test <<<");
+		LOGGER.info(" >>> unit-test <<< ");
 		SimpleAppApplication app = new SimpleAppApplication();
 		
 		assertThat(app.start()).isNotNull();
