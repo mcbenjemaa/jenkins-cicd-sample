@@ -24,5 +24,14 @@ node {
  stage('Archive') {
         junit allowEmptyResults: true, testResults: '**/target/**/TEST*.xml'
  }
+  
+  stage('Deploy') {
+     sh 'pwd'
+     sshagent (credentials: ['aws-vm']) {
+      sh 'ssh -o StrictHostKeyChecking=no ec2-user@ec2-54-187-220-60.us-west-2.compute.amazonaws.com -a'
+      //sh '' 
+    }
+    
+  }
 
 }
