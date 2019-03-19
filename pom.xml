@@ -8,11 +8,11 @@
 		<version>2.1.3.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.casino.live.dealer</groupId>
+	<groupId>com.medmedchiheb.simpleapp</groupId>
 	<artifactId>simple-app</artifactId>
 	<version>0.0.1</version>
 	<name>simple-app</name>
-	<description>Casino livedealer</description>
+	<description>Simple Java App</description>
 
 	<properties>
 		<java.version>1.8</java.version>
