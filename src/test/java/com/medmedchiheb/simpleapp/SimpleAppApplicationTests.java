@@ -1,4 +1,4 @@
-package com.casino.live.dealer;
+package com.medmedchiheb.simpleapp;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
