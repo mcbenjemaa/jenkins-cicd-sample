@@ -1,7 +1,7 @@
 # DevOps CI/CD simple Pipeline
 
-CI/CD simple pipeline for java application with Maven
+CI/CD sample pipeline for java application with Maven
 
-Branch: maven-jar
-   Sample of deploying jar 
+- Example with Maven deploying a jar 
+- Example with docker 
 
