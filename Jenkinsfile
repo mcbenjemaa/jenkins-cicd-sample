@@ -29,7 +29,7 @@ node {
    
      withCredentials([sshUserPrivateKey(credentialsId: "dev-aws", keyFileVariable: 'keyfile')]) {
        // def workspace = pwd()
-       def jarFile = "workspace/devops-ci-simple/target/simple-app.jar"
+       def jarFile = "/workspace/devops-ci-simple/target/simple-app.jar"
        sh "scp -i ${keyfile} ~${jarFile} ec2-user@ec2-54-187-220-60.us-west-2.compute.amazonaws.com:~/home/ec2-user"
        
      }
