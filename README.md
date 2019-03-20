@@ -1,4 +1,4 @@
-# DevOps CI/CD simple Pipeline
+# Sample DevOps CI/CD Pipeline
 
 CI/CD sample pipeline for java application with Maven
 
