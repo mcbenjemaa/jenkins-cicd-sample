@@ -28,8 +28,8 @@ node {
   stage('Deploy') {
    
      withCredentials([sshUserPrivateKey(credentialsId: "dev-aws", keyFileVariable: 'keyfile')]) {
-       def workspace = pwd()
-       def jarFile = "${workspace}/target/simple-app.jar"
+       // def workspace = pwd()
+       def jarFile = "workspace/devops-ci-simple/target/simple-app.jar"
        sh "scp -i ${keyfile} ~${jarFile} ec2-user@172.31.26.213:~/home/ec2-user"
        
      }
