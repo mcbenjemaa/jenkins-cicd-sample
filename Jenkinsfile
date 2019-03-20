@@ -26,16 +26,18 @@ node {
  }
   
   stage('Deploy') {
-    sshagent(['dev-aws']) {
-       sh 'ssh -o StrictHostKeyChecking=no ec2-user@172.31.26.213'
-
-    }
-    
+   
      withCredentials([sshUserPrivateKey(credentialsId: "dev-aws", keyFileVariable: 'keyfile')]) {
        stage('scp-f/b') {
         sh "scp -i ${keyfile} ~/target/simple-app.jar ec2-user@172.31.26.213:~/home/ec2-user"
        }
      }
+    
+      sshagent(['dev-aws']) {
+        def runCMD = 'java -jar simple-app.jar'
+        sh "ssh -o StrictHostKeyChecking=no ec2-user@172.31.26.213 ${runCMD}"
+
+      }
 
     /*sshagent (credentials: ['aws-vm']) {
       sh 'ssh -o StrictHostKeyChecking=no ec2-user@ec2-54-187-220-60.us-west-2.compute.amazonaws.com -a'
