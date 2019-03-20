@@ -36,7 +36,7 @@ node {
     
       sshagent(['dev-aws']) {
         def runCMD = 'java -jar simple-app.jar'
-        sh "ssh -o StrictHostKeyChecking=no ec2-user@172.31.26.213 ${runCMD}"
+        sh "ssh -o StrictHostKeyChecking=no ec2-user@ec2-54-187-220-60.us-west-2.compute.amazonaws.com ${runCMD}"
 
       }
 
