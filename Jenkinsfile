@@ -30,6 +30,8 @@ node {
      sh "docker login -u medchiheb -p ${dockerPWD}"
    }
    sh "docker push medchiheb/sample-java-app"
+   sh "docker logout"
+
  }
 
  stage('Deploy') {
