@@ -28,7 +28,7 @@ node {
   stage('Deploy') {
      sh 'pwd
     sshagent(['dev-aws']) {
-       sh 'ssh -o StrictHostKeyChecking=no ec2-user@ec2-54-187-220-60.us-west-2.compute.amazonaws.com -a'
+       sh 'ssh -o StrictHostKeyChecking=no ec2-user@172.31.26.213'
 
     }
 
