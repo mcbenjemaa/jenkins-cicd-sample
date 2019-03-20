@@ -37,7 +37,8 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-			        <finalName>simple-app</finalName>                   
+			        <finalName>simple-app</finalName>
+			        <executable>true</executable>                   
 			    </configuration>
 			</plugin>
 		       
