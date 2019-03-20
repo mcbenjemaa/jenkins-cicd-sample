@@ -27,10 +27,10 @@ node {
   
   stage('Deploy') {
    
-    /* withCredentials([sshUserPrivateKey(credentialsId: "dev-aws", keyFileVariable: 'keyfile')]) {
+     withCredentials([sshUserPrivateKey(credentialsId: "dev-aws", keyFileVariable: 'keyfile')]) {
        def jarFile = "/workspace/devops-ci-simple/target/simple-app.jar"
        sh "scp -i ${keyfile} ~${jarFile} ec2-user@ec2-54-187-220-60.us-west-2.compute.amazonaws.com:~"   
-     }*/
+     }
     
       sshagent(['dev-aws']) {
         def runCMD = 'java -jar simple-app.jar'
